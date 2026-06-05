@@ -1,57 +1,56 @@
 'use client';
 
-import Image from "next/image";
 
 export function Hoje() {
     return (
-        <div>
-            <div>
-                <Image
-                    className=""
-                    src="/images/clima.png"
+        <div className="bg-purple-800/50 border border-purple-900 rounded-xl p-4 flex flex-wrap items-center md:flex-row md:justify-between">
+            <div className="flex flex-wrap items-center px-8">
+                <img
+                    className="flex w-auto h-[10vh] md:h-[20vh]"
+                    src="/images/SOL.png"
                     alt=""
-                    width={100}
-                    height={20}
-                    priority
                 />
+                <div className="flex">
+                    <span className="text-white text-4xl font-bold pl-4">
+                        23°
+                    </span>
+                    <div className="pt-4">
+                        <span className="text-white text-2xl pr-2">
+                            /
+                        </span>
+                        <span className="text-white text-lg">
+                            17°
+                        </span>
+                    </div>
+                </div>
             </div>
-
-            <div>
-                <div>
-                    <Image
-                        className=""
+            <div className="gap-6 md:gap-10 flex flex-wrap h-full md:flex-row lg:justify-end mr-10">
+                <div className="flex flex-col items-center">
+                    <img
+                        className="w-auto h-[4vh] md:h-[10vh] flex"
                         src="/images/precipitacao.png"
                         alt="Precipitação"
-                        width={100}
-                        height={20}
-                        priority
                     />
                     <p>%</p>
                     <p>Precipitação</p>
                 </div>
-                <div>
-                    <Image
-                        className=""
+                <div className="flex flex-col items-center">
+                    <img
+                        className="w-auto h-[4vh] md:h-[10vh] flex"
                         src="/images/humidade.png"
-                        alt="Humidade"
-                        width={100}
-                        height={20}
-                        priority
+                        alt="Precipitação"
                     />
                     <p>%</p>
                     <p>Humidade</p>
                 </div>
-                <div>
-                    <Image
-                        className=""
+                <div className="flex flex-col items-center">
+                    <img
+                        className="w-auto h-[4vh] md:h-[10vh] flex"
                         src="/images/velocidadeVento.png"
-                        alt="Velocidade do vento"
-                        width={100}
-                        height={20}
-                        priority
+                        alt="Precipitação"
                     />
                     <p>km/h</p>
-                    <p>Velocidade vento</p>
+                    <p>Vel. vento</p>
                 </div>
             </div>
         </div>
